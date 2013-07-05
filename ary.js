@@ -41,7 +41,6 @@
 
 
 //数组去重
-
 var ARRAY = {
     //unique 唯一的  数组去重
     ary_unique : function( ary ){

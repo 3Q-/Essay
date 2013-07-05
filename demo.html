@@ -5,11 +5,41 @@
     <title>数组的一些用法</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> 
     <link rel="stylesheet" type="text/css" href="normalize.min.css" media="all" />
+    <script type="text/javascript">
+        /*
+         * 定义全局变量
+         * 有利于快速定义全局变量
+         */
+
+        var Global = {};
+
+        Global.namespace = function( name ){ 
+
+            var names = name.split('.');
+            var i = (names[0] = "Global") ? 1 : 0;
+            var len = names.length;
+            var o = Global;
+
+            for(i ; i<len; i++ ){
+                o[ names[i] ]= o[ names[i] ] || {};
+                o = o[ names[i] ];
+            }
+        };
+
+    </script>
     <script type="text/javascript" src="jQuery.js"></script>
     <script type="text/javascript" src="ary.js"></script>
     <script type="text/javascript">
-
         $(function(){
+
+            //定义全局变量
+            Global.namespace('Global.name.xiexie');
+            Global.namespace('Global.name.3Q');
+            Global.name.xiexie.name = 'xiexie';
+            Global.name.xiexie.age = '26';
+            Global.name.xiexie.hight = '176cm';
+            Global.name.xiexie.weight = '60kg';
+            console.log( Global.name );
 
             var ary = [10, 1, 2, 3, 4, 5, 6, 7, 8, 4, 5, 2,1, 3, 9, 0];        
             var max = ARRAY.ary_max(ary);
