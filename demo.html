@@ -16,7 +16,7 @@
         Global.namespace = function( name ){ 
 
             var names = name.split('.');
-            var i = (names[0] = "Global") ? 1 : 0;
+            var i = (names[0] == "Global") ? 1 : 0;
             var len = names.length;
             var o = Global;
 
@@ -34,7 +34,7 @@
 
             //定义全局变量
             Global.namespace('Global.name.xiexie');
-            Global.namespace('Global.name.3Q');
+            Global.namespace('name.3Q.msg');
             Global.name.xiexie.name = 'xiexie';
             Global.name.xiexie.age = '26';
             Global.name.xiexie.hight = '176cm';
