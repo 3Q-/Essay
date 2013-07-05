@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+    <title>数组的一些用法</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> 
+    <link rel="stylesheet" type="text/css" href="normalize.min.css" media="all" />
+    <script type="text/javascript" src="jQuery.js"></script>
+    <script type="text/javascript" src="ary.js"></script>
+    <script type="text/javascript">
+
+        $(function(){
+
+            var ary = [10, 1, 2, 3, 4, 5, 6, 7, 8, 4, 5, 2,1, 3, 9, 0];        
+            var max = ARRAY.ary_max(ary);
+            var min = ARRAY.ary_min(ary);
+            var unique = ARRAY.ary_unique(ary);
+            var min_max = ARRAY.ary_min_max(ary);
+            var max_min = ARRAY.ary_max_min(ary);
+
+            console.log( max );
+            console.log( min );
+            console.log( unique );
+            console.log( min_max );
+            console.log( max_min );
+
+        }); 
+    </script>
+</head>
+<body>
+</body>
+</html>
